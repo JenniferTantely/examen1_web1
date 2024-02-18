@@ -38,6 +38,10 @@
 
 #icon_nav {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;        
+    border: none;
 }
 
 .nav_title img {
@@ -230,35 +234,18 @@
     }
 
     #icon_nav {
-        border: none;
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
+        
     }
     #icon_home{
         display: none;
     }
-    #icon_nav:hover{
-        animation-name: showNavbar;
-    }
-    @keyframes showNavbar {
-        from{
-            #icon_home{
-                display: none;
-            }
-        }
-        to{
-            #icon_home{
-                display: flex;
-
-            }
-        }
-    }
-    .nav_bar {
+    .nav_bar{
         display: none;
     }
-
+    #icon_nav:hover{
+        transform: translateX(15px);
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -311,6 +298,7 @@
         color: var(--second-color);
         font-size: 3rem;
     }
+    
     .network {
         display: flex;
         flex-direction: row;
