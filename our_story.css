@@ -1,6 +1,8 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -11,65 +13,137 @@
     --primary-font-family: arial;
     --second-font-family: "Edwardian Script ITC";
 }
-body{
-    display: flex;
-    flex-direction: column;
-    color: #9aaa79;
+
+body {
+    font-family: var(--primary-font-family);
 }
 
-/*about the navbar*/
-.nav {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid var(--primary-color);
+nav {
     background-color: var(--primary-color);
+    height: 80px;
     width: 100%;
-    height: 10vh;
-}
-
-.nav_title {
-    display: inherit;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 20%;
+    align-items: center;
+    position: relative;
 }
 
-#icon_nav {
-    display: none;
+#icon_book {
+    height: 70px;
     position: absolute;
-    top: 0;
-    left: 0;        
-    border: none;
+    top: 7px;
+    left: 0;
 }
 
-.nav_title img {
-    flex-basis: 18%;
-    height: 9.6vh;
-}
-
-.nav_title h1 {
-    margin: 3vh 1vw;
+.logo {
     color: var(--second-color);
     font-family: var(--second-font-family);
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 5vw;
 }
 
-.nav_bar {
-    display: inherit;
+nav ul {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 80%;
-    padding-left: 30vw;
+    margin-right: 20px;
+    gap: 90px;
 }
 
-.nav_bar a {
-    text-decoration: none;
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
     color: var(--second-color);
-    font-family: var(--primary-font-family);
     font-size: 17px;
+    padding: 0 13px;
     font-weight: 700;
 }
 
-.nav_bar a:hover {
+a:hover {
     text-decoration: underline;
+
+}
+
+a.active {
+    transition: 5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    #icon_contact {
+        display: none;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-left: 25vw;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: var(--primary-color);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 20px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: var(--second-color);
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+section {
+    background: url("image_background.jpg") no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
 }
