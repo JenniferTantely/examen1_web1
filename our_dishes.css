@@ -102,21 +102,22 @@ a.active {
     margin-block: 10px;
 }
 
-.question h4{
+.question h4 {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 1.2em;
 }
 
-.dishes{
+.dishes {
     display: flex;
     flex-direction: row;
     /*border: 1px solid blue;*/
     margin: 2vh 4vw;
     height: 68dvh;
 }
+
 /*soup*/
-.soup{
+.soup {
     flex-basis: 12vw;
     border-radius: 10px;
     display: flex;
@@ -129,11 +130,11 @@ a.active {
     position: relative;
 }
 
-.soup:hover{
+.soup:hover {
     transform: rotateY(180deg);
 }
 
-.soup_front{
+.soup_front {
     backface-visibility: hidden;
     overflow: hidden;
     background-color: var(--primary-color);
@@ -147,30 +148,34 @@ a.active {
     border-radius: 10px;
 }
 
-.soup_front h3{    
+.soup_front h3 {
     font-family: var(--primary-font-family);
     color: var(--second-color);
 }
 
-.soup_dish{
+.soup_dish {
+    display: flex;
+    flex-direction: column;
     backface-visibility: hidden;
     overflow: hidden;
     transform: rotateY(180deg);
 }
 
-.simple, .special{
+.simple,
+.special {
     text-align: center;
     color: var(--second-color);
 }
 
-.simple img, .special img{
+.simple img,
+.special img {
     border-radius: 8px;
     width: 10vw;
 }
 
 /*side dish*/
-.side{
-    height:100%;
+.side {
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-basis: 24vw;
@@ -182,11 +187,11 @@ a.active {
     position: relative;
 }
 
-.side:hover{
+.side:hover {
     transform: rotateY(180deg);
 }
 
-.front{
+.front {
     backface-visibility: hidden;
     overflow: hidden;
     background-color: var(--primary-color);
@@ -200,14 +205,14 @@ a.active {
     border-radius: 10px;
 }
 
-.front h3{
+.front h3 {
     font-family: var(--primary-font-family);
     color: var(--second-color);
     text-align: center;
     margin-bottom: 2px;
 }
 
-.side_dish{
+.side_dish {
     backface-visibility: hidden;
     overflow: hidden;
     width: 100%;
@@ -221,16 +226,20 @@ a.active {
     transform: rotateY(180deg);
 }
 
-.side_dish p{
+.side_dish p {
     text-align: center;
 }
 
-.curry img, .shrimp img, .pork img, .bacon img{
+.curry img,
+.shrimp img,
+.pork img,
+.bacon img {
     border-radius: 8px;
     width: 10vw;
 }
+
 /*beverage*/
-.beverage{
+.beverage {
     flex-basis: 12vw;
     border-radius: 10px;
     display: flex;
@@ -241,23 +250,28 @@ a.active {
     background-color: var(--primary-color);
 }
 
-.beverage h3{
+.beverage h3 {
     font-family: var(--primary-font-family);
     color: var(--second-color);
 }
 
-.juice, .tea, .smoothie{
+.juice,
+.tea,
+.smoothie {
     text-align: center;
     color: var(--second-color);
 }
 
-.juice img, .tea img, .smoothie img{
+.juice img,
+.tea img,
+.smoothie img {
     border-radius: 8px;
     width: 10vw;
 }
+
 /*special dish*/
-.special_dish{
-    height:100%;
+.special_dish {
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-basis: 24vw;
@@ -269,11 +283,11 @@ a.active {
     position: relative;
 }
 
-.special_dish:hover{
+.special_dish:hover {
     transform: rotateY(180deg);
 }
 
-.special_dish_front{
+.special_dish_front {
     backface-visibility: hidden;
     overflow: hidden;
     background-color: var(--primary-color);
@@ -287,14 +301,14 @@ a.active {
     border-radius: 10px;
 }
 
-.special_dish_front h3{
+.special_dish_front h3 {
     font-family: var(--primary-font-family);
     color: var(--second-color);
     text-align: center;
     margin-bottom: 2px;
 }
 
-.dish_spl{
+.dish_spl {
     backface-visibility: hidden;
     overflow: hidden;
     margin-top: 10px;
@@ -308,16 +322,17 @@ a.active {
     transform: rotateY(180deg);
 }
 
-.dish_spl p{
+.dish_spl p {
     text-align: center;
 }
 
-.dish_spl img{
+.dish_spl img {
     border-radius: 8px;
     width: 10vw;
 }
+
 /*salad*/
-.salad{
+.salad {
     flex-basis: 12vw;
     border-radius: 10px;
     display: flex;
@@ -331,11 +346,11 @@ a.active {
     position: relative;
 }
 
-.salad:hover{
+.salad:hover {
     transform: rotateY(180deg);
 }
 
-.salad_front{
+.salad_front {
     backface-visibility: hidden;
     overflow: hidden;
     background-color: var(--primary-color);
@@ -349,29 +364,29 @@ a.active {
     border-radius: 10px;
 }
 
-.salad_front h3{
+.salad_front h3 {
     font-family: var(--primary-font-family);
     color: var(--second-color);
 }
 
-.salad_dish{
+.salad_dish {
     backface-visibility: hidden;
     overflow: hidden;
     transform: rotateY(180deg);
 }
 
 
-.squash, .light{
+.squash,
+.light {
     text-align: center;
     color: var(--second-color);
 }
 
-.squash img, .light img{
+.squash img,
+.light img {
     border-radius: 8px;
     width: 10vw;
 }
-
-
 
 
 @media (max-width: 952px) {
@@ -404,8 +419,273 @@ a.active {
         display: flex;
         flex-direction: column;
         width: 100%;
+        align-items: flex-start;
+    }
+
+    .question {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         align-items: center;
     }
+
+    .question h2 {
+        color: var(--primary-color);
+        font-family: var(--second-font-family);
+        font-size: 3.5vh;
+        margin-block: 10px;
+    }
+
+    .question h4 {
+        text-align: center;
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.5vh;
+        padding-bottom: 20px;
+    }
+
+
+    .dishes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 3vh;
+        width: 100%;
+        height: 500vh;
+        /**/
+    }
+
+    /*soup*/
+    .soup {
+        flex-basis: 12vh;
+        border-radius: 10px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        margin-inline: 5%;
+        transform-style: flat;
+        transition: none;
+        position: static;
+    }
+
+    .soup:hover {
+        transform: none;
+    }
+
+    .soup_front {
+        backface-visibility: visible;
+        overflow: visible;
+        background-color: var(--primary-color);
+        position: static;
+        height: 5%;
+        width: 100%;
+        text-align: center;
+        padding-block: 0%;
+        border-radius: 0%;
+    }
+
+
+    .soup_dish {
+        backface-visibility: visible;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: none;
+    }
+
+    .simple img,
+    .special img {
+        border-radius: 8px;
+        width: 10vh;
+    }
+
+    /*side dish*/
+    .side {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 24vh;
+        background-color: var(--primary-color);
+        margin-left: 0;
+        border-radius: 10px;
+        transform-style: flat;
+        transition: none;
+        position: static;
+        width: 90%;
+    }
+
+    .side:hover {
+        transform: none;
+    }
+
+    .front {
+        backface-visibility: visible;
+        overflow: visible;
+        background-color: var(--primary-color);
+        position: static;
+        height: 5%;
+        width: 100%;
+        text-align: center;
+        padding-block: 0;
+        border-radius: 0;
+    }
+
+    .front h3 {
+        font-family: var(--primary-font-family);
+        color: var(--second-color);
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .side_dish {
+        backface-visibility: hidden;
+        overflow: visible;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 5vw;
+        color: var(--second-color);
+        transform: none;
+    }
+
+    .curry img,
+    .shrimp img,
+    .pork img,
+    .bacon img {
+        border-radius: 8px;
+        width: 10vh;
+    }
+
+    .beverage {
+        flex-basis: 12vh;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .juice img,
+    .tea img,
+    .smoothie img {
+        border-radius: 8px;
+        width: 10vh;
+    }
+
+    /*special dish*/
+    .special_dish {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 24vh;
+        background-color: var(--primary-color);
+        margin-left: 0;
+        border-radius: 10px;
+        transform-style: flat;
+        transition: none;
+        position: static;
+        width: 90%;
+    }
+
+    .special_dish:hover {
+        transform: none;
+    }
+
+    .special_dish_front {
+        backface-visibility: visible;
+        overflow: visible;
+        background-color: var(--primary-color);
+        position: static;
+        height: 5%;
+        width: 100%;
+        text-align: center;
+        padding-block: 0;
+        border-radius: 0;
+    }
+
+    .special_dish_front h3 {
+        font-family: var(--primary-font-family);
+        color: var(--second-color);
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .dish_spl {
+        backface-visibility: hidden;
+        overflow: visible;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 5vw;
+        color: var(--second-color);
+        transform: none;
+    }
+
+    .dish_spl img {
+        width: 10vh;
+    }
+    /*salad*/
+    .salad {
+        flex-basis: 12vh;
+        border-radius: 10px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        margin-inline: 5%;
+        transform-style: flat;
+        transition: none;
+        position: static;
+        margin-bottom: 2vh;
+    }
+
+    .salad:hover {
+        transform: none;
+    }
+
+    .salad_front {
+        backface-visibility: visible;
+        overflow: visible;
+        background-color: var(--primary-color);
+        position: static;
+        height: 5%;
+        width: 100%;
+        text-align: center;
+        padding-block: 0%;
+        border-radius: 0%;
+    }
+
+    .salad_dish {
+        backface-visibility: visible;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: none;
+    }
+
+    .squash img,
+    .light img {
+        width: 10vh;
+    }
+
 
 }
 
