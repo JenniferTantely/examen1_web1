@@ -226,7 +226,10 @@ nav ul li a.active {
         font-size: 30px;
         margin-left: 25vw;
     }
-
+    nav{
+        position: sticky;
+        top: 0;
+    }
     nav ul {
         display: flex;
         flex-direction: column;
