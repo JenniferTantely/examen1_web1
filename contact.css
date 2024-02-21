@@ -215,7 +215,9 @@ nav ul li a.active {
     padding: 2vh;
 }
 
-
+.network a:hover {
+    transform: translateX(-1px);
+}
 
 /*contact*/
 .commit h2 {

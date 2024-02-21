@@ -222,7 +222,7 @@ nav ul li a.active {
 }
 
 @media (max-width: 952px) {
-    #icon_contact {
+    #icon_home {
         display: none;
     }
 
