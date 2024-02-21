@@ -62,12 +62,12 @@ nav ul li a {
     font-weight: 700;
 }
 
-a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 
 }
 
-a.active {
+nav ul li a.active {
     transition: 5s;
 }
 
@@ -85,6 +85,164 @@ a.active {
     display: none;
 }
 
+/*main page*/
+.contact_page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 89vh;
+}
+
+/*left-frame*/
+.cover {
+    height: 100%;
+    width: 50%;
+}
+
+.div_img {
+    border: 1px solid var(--primary-color);
+    margin-inline: 10vw;
+    margin-top: 8vh;
+    height: 65%;
+    border-radius: 50%;
+    overflow: hidden;
+    animation-name: change;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change {
+    0% {
+        background-image: url("images/light_chayote_squash_cover.jpg");
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url("images/chayote_beignet_cover.jpg");
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url("images/waitress_img.PNG");
+        background-size: cover;
+    }
+}
+
+.pub {
+    height: 20%;
+    text-align: center;
+    margin-top: 5%;
+    padding-inline: 12px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.div_a {
+    display: none;
+}
+
+/*book a table and right-frame*/
+.commit {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+}
+
+.reserv_net {
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#reservation {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#reservation input {
+    height: 8vh;
+    border: 1px solid var(--second-color);
+    border-radius: 8px;
+}
+
+#reservation label {
+    text-align: center;
+    color: var(--second-color);
+    font-weight: 700;
+}
+
+#submit {
+    font-family: var(--second-font-family);
+    font-size: 2.5em;
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    border-radius: 10px;
+    border: 4px solid #eeeeee;
+    width: 10vw;
+    margin-left: 8vw;
+}
+
+#submit:hover {
+    background-color: var(--second-color);
+    color: var(--primary-color);
+}
+
+/*social media*/
+.network {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+.network img {
+    width: 3vw;
+}
+
+.network a {
+    border: none;
+    padding: 2vh;
+}
+
+
+
+/*contact*/
+.commit h2 {
+    color: var(--second-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--second-font-family);
+    font-size: 3em;
+}
+
+#contact {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--second-color);
+}
+
+#contact img {
+    height: 5vh;
+
+}
+
+
 @media (max-width: 952px) {
     #icon_contact {
         display: none;
@@ -94,7 +252,10 @@ a.active {
         font-size: 30px;
         margin-left: 25vw;
     }
-
+    nav{
+        position: sticky;
+        top: 0;
+    }
     nav ul {
         display: flex;
         flex-direction: column;
@@ -104,6 +265,120 @@ a.active {
     nav ul li a {
         font-size: 16px;
     }
+
+    /*main page*/
+    .contact_page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 89vh;
+    }
+
+    /*left-frame*/
+    .cover {
+        height: 80dvh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: change;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    .div_img {
+        border-style: none;
+        margin: 0%;
+        border-radius: 0%;
+        animation: none;
+    }
+
+    @keyframes change {
+        0% {
+            background-image: url("images/light_chayote_squash_cover_dark.jpg");
+            background-size: cover;
+        }
+
+        50% {
+            background-image: url("images/chayote_beignet_cover_dark.jpg");
+            background-size: cover;
+        }
+
+        100% {
+            background-image: url("images/waitress_img_dark.PNG");
+            background-size: cover;
+        }
+    }
+
+    .pub {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--second-font-family);
+        height: 60dvh;
+        font-size: 1.7em;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+    }
+
+    .div_a {
+        margin-top: 10vh;
+        display: block;
+        display: flex;
+        flex-direction: row;
+        gap: 30vw;
+    }
+
+    .div_a a {
+        color: var(--primary-colorr);
+    }
+
+    .div_a a:hover{
+        color: var(--primary-color);
+    }
+
+    .commit {
+        width: 100%;
+        padding-bottom: 10vh;
+    }
+
+    #submit {
+        font-family: var(--second-font-family);
+        font-size: 1.7em;
+        background-color: var(--primary-color);
+        color: var(--second-color);
+        border-radius: 10px;
+        border: 4px solid #eeeeee;
+        width: 30vw;
+        margin-left: 10vw;
+    }
+    
+    
+    .network {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
+        width: 100%;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .network img {
+        width: 9vw;
+    }
+
+    .network a {
+        border: none;
+        padding: 2vh;
+    }
+
 }
 
 @media (max-width: 858px) {
@@ -140,10 +415,4 @@ a.active {
     #check:checked~ul {
         left: 0;
     }
-}
-
-section {
-    background: url("image_background.jpg") no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
 }
